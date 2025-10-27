@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P5.js Sliding Menu with iFrame</title>
+    <style>
+        /* 移除瀏覽器預設邊距 */
+        body { margin: 0; overflow: hidden; } 
+        canvas { display: block; }
+        
+        /* 設置 iframe 樣式，初始隱藏並居中 */
+        #contentFrame {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* 確保真正的中心定位 */
+            border: 5px solid white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            display: none; /* 初始隱藏 */
+            z-index: 999; /* 確保它在畫布上方 */
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/addons/p5.dom.js"></script>
+    
+    <script src="sketch.js"></script> 
+</head>
+<body>
+    <iframe id="contentFrame" src="" allowfullscreen></iframe>
+</body>
+</html>
